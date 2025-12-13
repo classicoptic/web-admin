@@ -17,7 +17,7 @@ const AdminLoginPage = () => {
         e.preventDefault();
         setLoginLoading(true);
 
-        const loginUrl = "http://localhost:4000/api/auth/login"; // ✅ Fixed spacing
+        const loginUrl = "https://web-backend-eta.vercel.app/api/auth/login"; // ✅ Fixed spacing
 
         try {
             const res = await axios.post(

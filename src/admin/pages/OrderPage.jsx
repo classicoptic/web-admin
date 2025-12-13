@@ -18,7 +18,7 @@ const OrdersList = () => {
 
     // Create api instance
     const api = axios.create({
-        baseURL: 'http://localhost:4000/api'
+        baseURL: 'https://web-backend-eta.vercel.app/api'
     });
 
     // Set up authentication and fetch data

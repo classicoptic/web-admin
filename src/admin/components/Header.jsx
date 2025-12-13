@@ -20,7 +20,7 @@ const Header = ({ isOpen }) => {
     const fetchAdminData = async () => {
       try {
         const token = localStorage.getItem("token"); // Get token if required
-        const response = await axios.get("http://localhost:4000/api/auth/user", {
+        const response = await axios.get("https://web-backend-eta.vercel.app/api/auth/user", {
           headers: {
             Authorization: `Bearer ${token}`,
           },

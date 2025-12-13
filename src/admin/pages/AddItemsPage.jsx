@@ -139,7 +139,7 @@ const AddItemsPage = () => {
 
       // Submit the form data
 
-      const response = await axios.post('http://localhost:4000/api/product/add', formDataForSubmit, {
+      const response = await axios.post('https://web-backend-eta.vercel.app/api/product/add', formDataForSubmit, {
 
         headers: {
           'Authorization': `Bearer ${token}`,

@@ -25,7 +25,7 @@ export default function UserPage() {
     const fetchUsers = async () => {
       try {
         setLoading(true);
-        const response = await axios.get("http://localhost:4000/api/auth/alluser", {
+        const response = await axios.get("https://web-backend-eta.vercel.app/api/auth/alluser", {
           headers: {
             'Authorization': 'Bearer ' + localStorage.getItem('token')
           }
@@ -77,7 +77,7 @@ export default function UserPage() {
       setDeletingId(id);
       setShowConfirmDialog(false);
 
-      const response = await axios.delete(`http://localhost:4000/api/auth/deleteuser/${id}`, {
+      const response = await axios.delete(`https://web-backend-eta.vercel.app/api/auth/deleteuser/${id}`, {
         headers: {
           'Authorization': 'Bearer ' + localStorage.getItem('token'),
         },
@@ -150,7 +150,7 @@ export default function UserPage() {
 
       // Use the new admin email sending endpoint
       const response = await axios.post(
-        "http://localhost:4000/api/admin/send-email",
+        "https://web-backend-eta.vercel.app/api/admin/send-email",
         {
           name: selectedUser.fullName,
           email: selectedUser.email,

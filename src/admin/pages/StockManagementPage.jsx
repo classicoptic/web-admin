@@ -45,7 +45,7 @@ const ProductManagementPage = () => {
     setIsLoading(true);
     setError(null);
     try {
-      const response = await axios.get('http://localhost:4000/api/product/get-all');
+      const response = await axios.get('https://web-backend-eta.vercel.app/api/product/get-all');
       console.log('API Response:', response.data);
 
       let productData = [];
@@ -109,7 +109,7 @@ const ProductManagementPage = () => {
       }
 
       const token = localStorage.getItem("token");
-      const response = await axios.delete(`http://localhost:4000/api/product/delete-product/${id}`, {
+      const response = await axios.delete(`https://web-backend-eta.vercel.app/api/product/delete-product/${id}`, {
         headers: {
           "Authorization": `Bearer ${token}`,
           'Content-Type': 'application/json'
@@ -216,7 +216,7 @@ const ProductManagementPage = () => {
       }
 
       const response = await axios.put(
-        `http://localhost:4000/api/product/update-product/${productId}`,
+        `https://web-backend-eta.vercel.app/api/product/update-product/${productId}`,
         formData,
         {
           headers: {

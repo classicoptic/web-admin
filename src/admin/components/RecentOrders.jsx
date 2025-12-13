@@ -23,7 +23,7 @@ const RecentOrders = () => {
         }
 
         // Include the token in the Authorization header
-        const response = await axios.get('http://localhost:4000/api/admin/get-orders', {
+        const response = await axios.get('https://web-backend-eta.vercel.app/api/admin/get-orders', {
           headers: {
             'Authorization': `Bearer ${token}`
           }
@@ -83,7 +83,7 @@ const RecentOrders = () => {
           return;
         }
 
-        const response = await axios.get('http://localhost:4000/api/admin/get-orders', {
+        const response = await axios.get('https://web-backend-eta.vercel.app/api/admin/get-orders', {
           headers: {
             'Authorization': `Bearer ${token}`
           }
